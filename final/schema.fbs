@@ -1,0 +1,11 @@
+namespace OgTeam1PA1;
+//chat message
+
+table ChatMessageTable {
+  user: string;
+  password: string;
+  receiver: string;
+  contents: string;
+}
+
+root_type ChatMessageTable;

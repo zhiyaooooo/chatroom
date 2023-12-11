@@ -1,0 +1,19 @@
+// Author: Yue Zhao
+// Created: December 1, 2023
+
+Running the Code
+-------------------------
+setting:
+flatc --python schema.fbs
+
+test:
+running locally
+(1) Open sevral shells in your Ubuntu VM
+(2) In one shell, invoke "python3 server.py"
+(3) In other shells, invoke "python3 client.py", and enter message you want to send 
+
+running in mininet (three hosts and three switches):
+(1) Open a shell in your Ubuntu VM
+(2) Invoke "sudo mn --topo=linear,3 --link=tc,delay=10ms -x"
+(3) In h1, invoke "python3 server.py"
+(4) In h2 and h3, invoke "python3 client.py -a 10.0.0.1"
